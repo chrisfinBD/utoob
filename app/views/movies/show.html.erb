@@ -16,11 +16,11 @@
   </tr>
   <tr>
     <td>Description:</td>
-    <td><%= @movie.trailer %></td>
+    <td><%=link_to @movie.description, @movie.description %></td>
   </tr>
   <tr>
     <td>Trailer:</td>
-    <td><%= @movie.trailer %></td>
+    <td><%=link_to @movie.trailer, @movie.trailer %></td>
   </tr>
     <td><%= link_to 'Edit', edit_movie_path(@movie) %></td>
     <td><%= link_to 'Back', movies_path %></td>
