@@ -32,15 +32,15 @@
       <%= link_to "Edit Profile", edit_user_path(:id), class: "nav-link" %>
       </li>
       <li class="nav-item">
-          <%= link_to "Logout", edit_user_path(:id) , class: "nav-link" %>
+          <%= link_to "Logout", logout_path , class: "nav-link" %>
         </li>
       <% else %>
 
       <li class="nav-item">
-          <%= link_to "Login", edit_user_path(:id) , class: "nav-link" %>
+          <%= link_to "Login", login_path, class: "nav-link" %>
          </li>
 <li class="nav-item">
-         <%= link_to "Sign Up", edit_user_path(:id) , class: "nav-link" %>
+         <%= link_to "Sign Up", signup_path, class: "nav-link" %>
         </li>
       <% end %>
       <li class="nav-item">
