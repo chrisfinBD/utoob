@@ -25,4 +25,7 @@
     <td><%= link_to 'Edit', edit_movie_path(@movie) %></td>
     <td><%= link_to 'Back', movies_path %></td>
   </tr>
+  <tr>
+    <td><%= content_tag(:iframe,'', width: 800, height: 400, src: @movie.trailer) %></td>
+  </tr>
 </table>
