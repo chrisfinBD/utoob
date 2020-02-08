@@ -28,8 +28,21 @@
         <%= link_to "Add Movie", new_movie_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Edit Profile", edit_user_path(:id), class: "nav-link" %>
+    <% if current_user %>
+      <%= link_to "Edit Profile", edit_user_path(:id), class: "nav-link" %>
       </li>
+      <li class="nav-item">
+          <%= link_to "Logout", edit_user_path(:id) , class: "nav-link" %>
+        </li>
+      <% else %>
+
+      <li class="nav-item">
+          <%= link_to "Login", edit_user_path(:id) , class: "nav-link" %>
+         </li>
+<li class="nav-item">
+         <%= link_to "Sign Up", edit_user_path(:id) , class: "nav-link" %>
+        </li>
+      <% end %>
       <li class="nav-item">
         <%= link_to "Admin",movies_path, class: "nav-link" %>
         </li>
@@ -38,15 +51,6 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <%= link_to "Search", root_path, class: "btn btn-outline-success my-2 my-sm-0" %>
     </form>
-    <% if current_user %>
-        <li class="nav-item">
-         <%= link_to "Edit Profile", edit_user_path(:id), class: "nav-link" %>
-        </li>
-      <% else %>
-<li class="nav-item">
-         <%= link_to "Login / Sign Up", redirect_to , class: "nav-link" %>
-        </li>
-      <% end %>
   </div>
   </nav>
 
