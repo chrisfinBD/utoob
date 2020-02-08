@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     def create
         @user = User.new(user_params)
         if @user.save
-            redirect_to(root_path, notice: "Welcome to the family")
+            redirect_to(root_path, notice: "Welcome to the family") 
         else
             render(:new)
         end
@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     
     def update
         @user = User.find(params[:id])
-        if @user.update(users_params)
+        if @user.update(user_params)
             redirect_to(users_path)
         else
             render(:edit)
