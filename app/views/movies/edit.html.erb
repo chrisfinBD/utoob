@@ -1,7 +1,10 @@
-<h1>Edit Movie</h1>
-
+<body id="editmovie">
+<h1 id="edittitle">Edit Movie</h1>
+<table>
 <%= form_for(@movie) do |f| %>
     <%= render("movie_form", form: f) %>
     <%= f.submit("Update") %>
 <% end %>
+</table>
 <p><%= content_tag(:iframe,'', width: 720, height: 486, src: @movie.trailer) %></p>
+</body>
