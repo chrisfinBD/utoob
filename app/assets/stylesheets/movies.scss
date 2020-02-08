@@ -1,3 +1,26 @@
-// Place all the styles related to the movies controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+#allmovies {
+  background-image: url("movies_background.png");
+  background-size: cover;
+  text-shadow: 2px 2px 5px #ff0000;
+}
+
+#indexMovieTitle {
+  color: black;
+  font-size: 1.5em;
+  text-shadow: 2px 2px 4px white;
+}
+
+#allmoviestitle {
+  text-align: center;
+  font-size: 4em;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 100%;
+  -webkit-text-stroke: 1px red;
+  text-shadow: 2px 2px 5px white;
+  opacity:.8;
+}
+
+#movielinks {
+  color:white !important;
+}
