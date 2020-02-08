@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   post "/signup", to: "users#create"
 
   namespace :admin do
-    get "/", to: "dashboard#index"
+    get "/admin", to: "dashboard#index"
+  end
 
 end
