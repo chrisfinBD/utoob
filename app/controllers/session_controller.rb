@@ -12,4 +12,10 @@ class SessionController < ApplicationController
             render(:new) 
         end
     end 
+
+    def destroy 
+        session.clear
+        cookies.clear
+        redirect_to(root_path, notice: "Logged Out")
+    end
 end
