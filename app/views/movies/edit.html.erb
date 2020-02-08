@@ -1,1 +1,7 @@
 <h1>movies/edit.html.erb</h1>
+
+<%= form_for(@movie) do |f| %>
+    <%= render("movie_form", form: f) %>
+    <%= f.submit("Update") %>
+<% end %>
+<p><%= content_tag(:iframe,'', width: 720, height: 486, src: @movie.trailer) %></p>

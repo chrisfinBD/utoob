@@ -14,7 +14,7 @@ class MoviesController < ApplicationController
   end
 
   def edit
-
+    @movie = Movie.find(params[:id])
   end
 
   def create
@@ -24,15 +24,16 @@ class MoviesController < ApplicationController
         if @movie.save
           format.html { redirect_to @movie, notice: 'Movie was successfully created.' }
         else
-          format.html { render :new }
+          fformat.html { render :new }
         end
       end    
     end
 
     def update
+      @movie = Movie.find(params[:id])
       respond_to do |format|
-        if @movie = Movie.find(params[:id])
-          format.html { redirect_to @song, notice: 'Movie was successfully updated.' }
+        if @movie.update(movie_params)
+          format.html { redirect_to @movie, notice: 'Movie was successfully updated.' }
         else
           format.html { render :edit }
         end
@@ -40,7 +41,7 @@ class MoviesController < ApplicationController
     end
 
     def destroy
-      @movie.destroy
+      @movie = Movie.find(params[:id]).destroy
       respond_to do |format|
         format.html { redirect_to movies_url, notice: 'Movie was successfully destroyed.' }
       end
@@ -53,7 +54,7 @@ class MoviesController < ApplicationController
     end
 
     def movie_params
-      params.fetch(:movie, {})
+      params.require(:movie).permit(:title, :duration, :genre, :description, :trailer)
     end
 end
 
