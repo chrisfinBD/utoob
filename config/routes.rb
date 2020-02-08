@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  #root to: "pages#index"
+  root to: "pages#index"
+
   resources :movies
   resources :users
   resources :comments
@@ -11,5 +12,5 @@ Rails.application.routes.draw do
 
   get "/signup", to: "users#new" 
   post "/signup", to: "users#create"
-  
+
 end
