@@ -1,6 +1,4 @@
-<h1>movies/index.html.erb</h1>
-
-<h1>All Movies</h1>
+<h1>All Movies in directory</h1>
 
 <table>
   <thead>
@@ -13,11 +11,11 @@
     <% @movies.each do |movie| %>
       <tr>
         <td><%= movie.title %></td>
-        <td><%= link_to 'Show', movie %></td>
+        <td><%= link_to 'View', movie %></td>
         <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
         <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
-  <p><%= link_to 'New', new_movie_path %></p>
+  <p><%= link_to 'ADD MOVIE', new_movie_path %></p>
 </table>
