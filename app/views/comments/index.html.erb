@@ -1,12 +1,12 @@
-<% @notes.each do |note| %>
+% @comments.each do |comment| %>
   <div> 
-  <h4><%=  " #{note.id} on #{note.posted_at}" %><h4>
+  <h4><%=  " #{comment.user.name} at #{comment.updated_at}" %><h4>
   <p>
-  <%= note.body %>
+  <%= comment.body %>
   <p>
-  &nbsp;&mdash;&nbsp;
-  <%= link_to("edit", edit_note_path(note.id)) %>
+  
+  <%= link_to("edit", edit_comment_path(comment.id)) %>
   -
-  <%= link_to("delete", note_path(note.id), method: :delete, data: {confirm: "Are you sure you want to delete #{note.id}?"}) %>
+  <%= link_to("delete", comment_path(comment.id), method: :delete, data: {confirm: "Are you sure you want to delete this comment #{comment.id}?"}) %>
   </div>
 <% end %>

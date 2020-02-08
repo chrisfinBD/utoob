@@ -1,6 +1,6 @@
 <% comments.each do |comment| %>
-  <div class="comment-card">
+  <div>
     <p><%= comment.body %></p>
-    <date><%= comment.updated_at.to_s(:short) %></date>
+    <p>Posted at <%= comment.updated_at.to_s(:short) %> by <%= comment.user.name =%><p>
   </div>
 <% end %>
