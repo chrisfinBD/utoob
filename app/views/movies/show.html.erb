@@ -1,6 +1,4 @@
-<h1>movies/show.html.erb</h1>
-
-<h1>MOVIE Info</h1>
+<h1><%= @movie.title %></h1>
 <table>
   <tr>
     <td>Title:</td>
@@ -26,3 +24,4 @@
     <td><%= link_to 'Back', movies_path %></td>
   </tr>
 </table>
+<p><%= content_tag(:iframe,'', width: 720, height: 486, src: @movie.trailer) %></p>

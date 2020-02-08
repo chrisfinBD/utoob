@@ -1,1 +1,7 @@
 <h1>movies/new.html.erb</h1>
+
+<p class="entertext"> New Movie <p>
+<%= form_for(@movie) do |f|%>
+    <%= render("movie_form", form: f)%>
+    <%= f.submit("Save") %>
+<% end %>
