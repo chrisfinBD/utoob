@@ -25,19 +25,28 @@
         <%= link_to "Movies All", movies_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
-~         <%= link_to "Add Movie", new_movie_path, class: "nav-link" %>
+        <%= link_to "Add Movie", new_movie_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
-~         <%= link_to "Edit Profile", edit_user_path(:id), class: "nav-link" %>
+        <%= link_to "Edit Profile", edit_user_path(:id), class: "nav-link" %>
       </li>
       <li class="nav-item">
-~         <%= link_to "Admin",movies_path, class: "nav-link" %>
+        <%= link_to "Admin",movies_path, class: "nav-link" %>
         </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <%= link_to "Search", root_path, class: "btn btn-outline-success my-2 my-sm-0" %>
     </form>
+    <% if current_user %>
+        <li class="nav-item">
+         <%= link_to "Edit Profile", edit_user_path(:id), class: "nav-link" %>
+        </li>
+      <% else %>
+<li class="nav-item">
+         <%= link_to "Login / Sign Up", redirect_to , class: "nav-link" %>
+        </li>
+      <% end %>
   </div>
   </nav>
 
