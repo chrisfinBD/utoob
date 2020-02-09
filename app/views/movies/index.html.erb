@@ -13,10 +13,14 @@
       <tr>
         <td id="indexMovieTitle"><%= movie.title %></td>
         <td id="movielinks"><%= link_to 'View', movie %></td>
+
+    <% if current_user && current_user.admin? %>
         <td id="movielinks"><%= link_to 'Edit', edit_movie_path(movie) %></td>
         <td id="movielinks"><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
       </tr>
     <% end %>
+      
   </tbody>
   <p><%= link_to 'ADD MOVIE', new_movie_path %></p>
 </table>
