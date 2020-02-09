@@ -31,9 +31,6 @@
         <%= link_to "Movies All", movies_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Add Movie", new_movie_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
     <% if current_user %>
       <%= link_to "Edit Profile", edit_user_path(current_user.id), class: "nav-link" %>
       </li>
@@ -50,6 +47,9 @@
       <% end %>
     <% if current_user && current_user.admin? %>
         <%= link_to "Admin",admin_admin_path, class: "nav-link" %>
+        <li class="nav-item">
+        <%= link_to "Add Movie", new_movie_path, class: "nav-link" %>
+      </li>
         </li>
         <% end %>
     </ul>
