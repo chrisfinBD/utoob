@@ -1,12 +1,12 @@
-#allmovies, #movieshow {
+#allmovies, #movieshow, #editmovie, #newmovie {
   background-image: url("movies_background.png");
   background-size: cover;
-  text-shadow: 2px 2px 10px #ff0000;
+  text-shadow: 2px 2px 11px #ff0000;
 }
 
-#indexMovieTitle, #movietitle {
+#indexMovieTitle, #movietitle, #edittitle, #addmovietitle {
   color: black;
-  font-size: 1.5em;
+  font-size: 2em;
   text-shadow: 2px 2px 3px white;
 }
 
@@ -24,3 +24,22 @@
 #movielinks {
   color:white !important;
 }
+
+.home_video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  top: 0;
+  z-index: -2;
+ }
+
+ #dpl {
+   position: absolute;
+   margin-left: 34%;
+   margin-top:3%;
+   font-size: 6em;
+   color: rgb(69, 48, 171);
+   -webkit-text-stroke: 5px black;
+ }
+
+ 
