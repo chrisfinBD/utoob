@@ -48,6 +48,11 @@
         </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
+      <%= form_with(url: search_path, method: :get, local: true) do |f|  %>
+  <%= f.text_field(:q, class: "btn btn-outline-success my-2 my-sm-0") %>
+  <%= f.submit("Search") %>
+
+<% end %>
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <%= link_to "Search", root_path, class: "btn btn-outline-success my-2 my-sm-0" %>
     </form>

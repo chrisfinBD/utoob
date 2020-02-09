@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   get "/signup", to: "users#new" 
   post "/signup", to: "users#create"
 
+  get "/search", to: "searches#index"
   namespace :admin do
     get "/admin", to: "dashboard#index"
   end
-
 end

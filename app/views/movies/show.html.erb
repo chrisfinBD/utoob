@@ -29,10 +29,11 @@
 
 
 <h5>Add new comment<h5>
-<%= form_for(@comment) do |f| %>
-  <% render("comment_form", form: f) %>
-  <%= f.submit("Save") %>
-<% end %>
+<%= render("comment_form") %>
+ 
+
+
+
 <% @comments.each do |comment| %>
 
   <div class="card" style="width: 18rem;">

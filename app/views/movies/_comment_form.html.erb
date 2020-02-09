@@ -1,8 +1,10 @@
 <p>
 <%= form_for(@comment) do |f| %>
 
- <%= f.text_area(:body) %>
-
- <% end %>
+ <%= f.text_area(:body, :class => "form-control") %>
+ <%= f.hidden_field(:movie_id, :value => @movie.id) %>
+ <%= f.hidden_field(:user_id, :value => current_user.id) %>
+ <%= f.submit("Save", :class => "btn btn-primary") %>
+<% end %>
  
 </p>
