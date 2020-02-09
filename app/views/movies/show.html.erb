@@ -26,3 +26,28 @@
   </tr>
 </table>
 <p><%= content_tag(:iframe,'', width: 720, height: 486, src: @movie.trailer) %></p>
+
+
+<h5>Add new comment<h5>
+<%= form_for(@comment) do |f| %>
+  <% render("comment_form", form: f) %>
+  <%= f.submit("Save") %>
+<% end %>
+<% @comments.each do |comment| %>
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= comment.user.name %> commented at <%= comment.updated_at %></h5>
+      <p class="card-text"><%= comment.body %></p>
+
+      <%= link_to 'Edit', edit_comment_path(comment.id), class: "card-link" %></td>
+      <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      
+    </div>
+  </div>
+<% end %>
+
+
+
+
+

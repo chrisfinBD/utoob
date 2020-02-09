@@ -6,6 +6,8 @@ class MoviesController < ApplicationController
 
   def show
     @movie = Movie.find(params[:id])
+    @comments = Comment.where( movie_id: params[:id])
+    @comment = Comment.new
 
   end
 
