@@ -1,7 +1,9 @@
-<h1>Add a New Movie</h1>
+<body id="newmovie">
+<h1 id="addmovietitle">Add a New Movie</h1>
 
 <p class="entertext"> New Movie <p>
 <%= form_for(@movie) do |f|%>
     <%= render("movie_form", form: f)%>
     <%= f.submit("Save") %>
 <% end %>
+</body>
