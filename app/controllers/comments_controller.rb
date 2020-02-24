@@ -1,6 +1,7 @@
 require 'pry'
 
 class CommentsController < ApplicationController
+  before_action :
   def index
     @comments = Comment.all.order(id: :asc)
     redirect_to(movie_path(@movie.id))
